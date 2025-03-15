@@ -62,7 +62,7 @@ func callUnary(ctx context.Context, client pb.HelloServiceClient) {
 // 调用服务器流式RPC
 func callServerStream(ctx context.Context, client pb.HelloServiceClient) {
 	log.Println("调用服务器流式RPC...")
-	stream, err := client.SayHelloServerStream(ctx, &pb.HelloRequest{Name: "服务器流"})
+	stream, err := client.SayHelloServerStream(ctx, &pb.HelloRequest{Name: "服务器流测试"})
 	if err != nil {
 		log.Fatalf("服务器流式RPC调用失败: %v", err)
 	}
